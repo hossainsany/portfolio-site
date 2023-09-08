@@ -13,6 +13,7 @@ const Contact = () => {
         fetch('/', {
             action: '/',
             method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => nav('/form-success'))
@@ -23,15 +24,7 @@ const Contact = () => {
         <section className={style.contact} id='contact'>
             <div className='container'>
                 <h2 className='section-title'>Contact</h2>
-                <form
-                    name='contact'
-                    action='/'
-                    method='POST'
-                    onSubmit={handleSubmit}
-                    data-netlify='true'
-                    netlify-honeypot='bot-field'
-                    className={style.form}
-                >
+                <form name='contact' onSubmit={handleSubmit} data-netlify='true' netlify-honeypot='bot-field' className={style.form}>
                     <input type='text' placeholder='Name' name='name' required />
                     <input type='email' placeholder='Email' name='email' required />
                     <textarea placeholder='Message' name='message' required />
