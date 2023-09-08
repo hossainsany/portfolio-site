@@ -1,0 +1,18 @@
+@import '../index.scss';
+
+.formSuccess {
+    background-color: $bg-light;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 55vh;
+        h3 {
+            padding-bottom: 15px;
+        }
+        p {
+            padding-bottom: 5px;
+        }
+    }
+}

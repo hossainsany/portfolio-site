@@ -1,0 +1,15 @@
+@import '../../index.scss';
+
+.projects {
+    background: $bg-dark;
+
+    .seeMoreBtn {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        .seeMore {
+            width: 300px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '../index.scss';
+
+.notFound {
+    background: $bg-light;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        padding-bottom: 50px;
+    }
+    p {
+        padding-bottom: 10px;
+    }
+    a {
+        color: $accent-color;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .notFound {
+        align-items: flex-start;
+        padding: 0 20px;
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            padding-bottom: 25px;
+        }
+    }
+}

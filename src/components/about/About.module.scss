@@ -1,0 +1,40 @@
+@import '../../index.scss';
+
+.about {
+    background-color: $bg-light;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .aboutText {
+                h2 {
+                    font-size: 36px;
+                    font-weight: 600;
+                }
+                p {
+                    padding: 30px 100px 0 0;
+                }
+                .link {
+                    color: $accent-color;
+                    padding-left: 5px;
+                    transition: 150ms ease-in-out;
+
+                    &:hover {
+                        color: $bg-dark;
+                        transition: 150ms ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .aboutImg {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            img {
+                border-radius: 12px;
+            }
+        }
+    }
+}

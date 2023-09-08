@@ -1,0 +1,71 @@
+@import '../../index.scss';
+
+.footer {
+    background: $bg-dark;
+    padding: 100px 0 50px 0;
+    position: relative;
+    .scrollTop {
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        height: 43px;
+        width: 43px;
+        border: 2px solid $accent-color;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: $accent-color;
+        transform: translate(-50%);
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+        &:hover {
+            background-color: transparent;
+            backdrop-filter: blur(15px);
+            transition: 200ms ease-in-out;
+        }
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .iconCard {
+            height: 48px;
+            width: 48px;
+            padding: 8px;
+            background-color: $bg-light;
+            border: 2px solid $bg-light;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            &:hover {
+                border: 2px solid $accent-color;
+                transition: 200ms ease-in-out;
+            }
+        }
+    }
+    .copyright {
+        p {
+            font-size: 14px;
+            text-align: center;
+            padding-top: 50px;
+            opacity: 0.7;
+        }
+    }
+
+    &.bgLight {
+        background-color: $bg-light;
+        .socials {
+            .iconCard {
+                background-color: $bg-dark;
+            }
+        }
+    }
+    &.bgDark {
+        background-color: $bg-dark;
+        .socials {
+            .iconCard {
+                background-color: $bg-light;
+            }
+        }
+    }
+}

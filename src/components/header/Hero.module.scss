@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(252deg, #43597d 0%, #2a3140 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    h1 {
+        font-size: 66px;
+        font-family: 'Roboto', sans-serif;
+        color: transparent;
+        -webkit-text-stroke: 1.5px $header-color;
+        .heroText {
+            -webkit-text-stroke: 1.5px $accent-color;
+        }
+    }
+}
