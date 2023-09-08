@@ -1,8 +1,8 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import style from './Contact.module.scss';
 
 const Contact = () => {
-    const history = useHistory();
+    const nav = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -15,7 +15,7 @@ const Contact = () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => history.push('/form-success'))
+            .then(() => nav('/form-success'))
             .catch((error) => alert(error));
     };
 
