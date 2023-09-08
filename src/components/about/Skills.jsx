@@ -1,5 +1,18 @@
 import style from './Skills.module.scss';
-import { icons } from '../../assets/icons/icons';
+import {
+    CssIcon,
+    FigmaIcon,
+    GitIcon,
+    HtmlIcon,
+    JsIcon,
+    NextjsIcon,
+    NodejsIcon,
+    NpmIcon,
+    ReactIcon,
+    TailwindIcon,
+    MuiIcon,
+    WordpressIcon,
+} from '../../assets/icons/index';
 
 const Skills = () => {
     return (
@@ -7,53 +20,53 @@ const Skills = () => {
             <h3>Skills:</h3>
             <div className={style.styleCards}>
                 <div className={style.iconCard}>
-                    <img src={icons.nextjs} alt='next js icon' />
+                    <NextjsIcon />
                     <p>NextJS</p>
                     <div></div>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.react} alt='react js icon' />
+                    <ReactIcon />
                     <p>ReactJS</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.js} alt='js icon' />
+                    <JsIcon />
                     <p>JavaScript</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.tailwind} alt='tailwind icon' />
+                    <TailwindIcon />
                     <p>Tailwind</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.mui} alt='material ui icon' />
+                    <MuiIcon />
                     <p>MaterialUI</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.css} alt='css icon' />
+                    <CssIcon />
                     <p>CSS</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.html} alt='html icon' />
+                    <HtmlIcon />
                     <p>HTML</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.nodejs} alt='node js icon' />
+                    <NodejsIcon />
                     <p>NodeJS</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.npm} alt='npm icon' />
+                    <NpmIcon />
                     <p>NPM</p>
                 </div>
 
                 <div className={style.iconCard}>
-                    <img src={icons.git} alt='git icon' />
+                    <GitIcon />
                     <p>Git</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.wordpress} alt='wordpress icon' />
+                    <WordpressIcon />
                     <p>WordPress</p>
                 </div>
                 <div className={style.iconCard}>
-                    <img src={icons.figma} alt='figma icon' />
+                    <FigmaIcon />
                     <p>Figma</p>
                 </div>
             </div>

@@ -5,10 +5,11 @@ import Skills from './Skills';
 const About = () => {
     return (
         <section className={style.about} id='about'>
+            <h2 className='section-title'>About Me</h2>
             <div className={`container ${style.container}`}>
                 <div className={style.text}>
                     <div className={style.aboutText}>
-                        <h2>About Me</h2>
+                        <h3>Who am I?</h3>
                         <p>
                             Hello, Im Hossain Sany, a passionate web developer and designer with over three years of experience in crafting
                             exceptional online experiences. My journey in the world of web development has been marked by a commitment to excellence,

@@ -5,7 +5,7 @@ import projects from '../constants/data';
 
 const ProjectsPage = () => {
     return (
-        <section className={style.projectsPage}>
+        <section className={style.projectsPage} id='top'>
             <h2 className='section-title'>Projects</h2>
             <div className='container'>
                 <div className={style.projectsContainer}>

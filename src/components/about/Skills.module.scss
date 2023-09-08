@@ -1,9 +1,11 @@
 @import '../../index.scss';
 
 .skills {
+    padding-top: 10px;
     h3 {
+        font-size: 30px;
         font-weight: 500;
-        padding: 30px 0 20px 0;
+        padding: 30px 0;
     }
     .styleCards {
         display: flex;
@@ -16,10 +18,16 @@
             margin-right: 10px;
             padding: 5px;
             border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             z-index: 1;
             transition: 400ms ease-in-out;
-
+            svg {
+                width: 45px;
+                height: 45px;
+            }
             p {
                 opacity: 0;
                 font-size: 13px;

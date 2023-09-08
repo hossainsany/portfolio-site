@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import projects from '../../constants/data';
+import { RightIcon } from '../../assets/icons';
 
 import style from './Projects.module.scss';
 import SingleProjectCard from './SingleProjectCard';
@@ -12,6 +13,10 @@ const Projects = () => {
             <div className='container'>
                 <h2 className={`${style.sectionTitle} section-title`}>Projects</h2>
                 <div className={style.projectsContainer}>
+                    <Link to='/projects' className={style.viewAll}>
+                        View All projects
+                        <RightIcon />
+                    </Link>
                     {limitedProjects.map((project) => {
                         return (
                             <SingleProjectCard

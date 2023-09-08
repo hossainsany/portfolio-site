@@ -4,6 +4,9 @@
     display: flex;
     padding: 50px 0;
     border-bottom: 1px solid $bg-light;
+    &:first-child {
+        padding-top: 0;
+    }
     .projectText {
         flex: 1;
         display: flex;

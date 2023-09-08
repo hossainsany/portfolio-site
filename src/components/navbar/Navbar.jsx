@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import style from './Navbar.module.scss';
 
 import logo from '../../assets/hs-logo.svg';
-import { icons } from '../../assets/icons/icons';
+import { BurgerMenuIcon } from '../../assets/icons';
 
 const Navbar = ({ location }) => {
     const isHome = location.pathname;
@@ -22,7 +22,7 @@ const Navbar = ({ location }) => {
             )}
 
             <div className={style.burgerMenu}>
-                <img src={icons.burgerMenu} alt='hamburger menu icon' />
+                <BurgerMenuIcon />
             </div>
 
             <ul className={style.navLinks}>

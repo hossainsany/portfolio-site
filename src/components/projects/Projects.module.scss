@@ -2,6 +2,31 @@
 
 .projects {
     background: $bg-dark;
+    .projectsContainer {
+        position: relative;
+        .viewAll {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: -20px;
+            right: 0;
+            color: $accent-color;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            svg {
+                height: 15px;
+                width: 15px;
+                fill: $accent-color;
+                transition: 200ms ease-in-out;
+            }
+            &:hover {
+                color: azure;
+            }
+            &:hover svg {
+                fill: azure;
+            }
+        }
+    }
 
     .seeMoreBtn {
         padding-top: 50px;

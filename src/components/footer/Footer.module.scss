@@ -16,7 +16,13 @@
         background-color: $accent-color;
         transform: translate(-50%);
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition: 200ms ease-in-out;
+        svg {
+            width: 38px;
+        }
         &:hover {
             background-color: transparent;
             backdrop-filter: blur(15px);
@@ -30,13 +36,23 @@
         .iconCard {
             height: 48px;
             width: 48px;
-            padding: 8px;
             background-color: $bg-light;
             border: 2px solid $bg-light;
             border-radius: 5px;
             margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             transition: 200ms ease-in-out;
+            a {
+                display: flex;
+                svg {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
             &:hover {
                 border: 2px solid $accent-color;
                 transition: 200ms ease-in-out;
