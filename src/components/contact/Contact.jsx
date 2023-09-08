@@ -10,7 +10,7 @@ const Contact = () => {
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        fetch('/', {
+        fetch('https://prototype.hossainsany.com/', {
             action: '/',
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
