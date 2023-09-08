@@ -16,7 +16,10 @@ const Contact = () => {
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => nav('/form-success'))
-            .catch((error) => alert(error));
+            .catch((error) => {
+                nav('/not-found');
+                console.log(error);
+            });
     };
 
     return (
