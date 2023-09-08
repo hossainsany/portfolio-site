@@ -10,8 +10,7 @@ const Contact = () => {
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        fetch('https://prototype.hossainsany.com/', {
-            action: '/',
+        fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString(),
@@ -24,7 +23,7 @@ const Contact = () => {
         <section className={style.contact} id='contact'>
             <div className='container'>
                 <h2 className='section-title'>Contact</h2>
-                <form name='contact' method='POST' onSubmit={handleSubmit} data-netlify='true' className={style.form}>
+                <form name='contact' method='POST' data-netlify='true' onSubmit={handleSubmit} className={style.form}>
                     <input type='hidden' name='contact' value='contact' />
 
                     <input type='text' placeholder='Name' name='name' required />
