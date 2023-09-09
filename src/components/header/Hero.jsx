@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+import { DoubleDownIcon } from '../../assets/icons';
 import style from './Hero.module.scss';
 
 const Hero = () => {
@@ -8,6 +10,10 @@ const Hero = () => {
                     Hey, Im <span className={style.heroText}>Hossain Sany</span>.
                 </h1>
                 <h1>A Freelance Web Developer!</h1>
+
+                <Link to='about' smooth={true} offset={0} duration={800} className={style.scroll}>
+                    <DoubleDownIcon />
+                </Link>
             </div>
         </div>
     );

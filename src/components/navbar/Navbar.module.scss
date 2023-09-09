@@ -103,7 +103,7 @@
 }
 
 // tablet
-@media screen and (min-width: 769px) and (max-width: 1400px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
     .navbar {
         width: 750px;
         overflow: hidden;
@@ -150,5 +150,11 @@
         .show {
             opacity: 1 !important;
         }
+    }
+}
+// other
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .navbar {
+        width: 1150px;
     }
 }

@@ -122,8 +122,15 @@ section {
     }
 }
 
+// other
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .container {
+        width: 1150px;
+    }
+}
+
 // tablet
-@media screen and (min-width: 769px) and (max-width: 1399px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
     .container {
         width: 750px;
     }

@@ -18,6 +18,7 @@ import { ReactComponent as UpworkIcon } from './upwork.svg';
 import { ReactComponent as UpIcon } from './angle-up.svg';
 import { ReactComponent as RightIcon } from './angle-right.svg';
 import { ReactComponent as Xicon } from './x.svg';
+import { ReactComponent as DoubleDownIcon } from './double-down.svg';
 
 export {
     CssIcon,
@@ -40,4 +41,5 @@ export {
     UpIcon,
     RightIcon,
     Xicon,
+    DoubleDownIcon,
 };
