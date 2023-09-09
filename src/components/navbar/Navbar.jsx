@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import style from './Navbar.module.scss';
 
-import logo from '../../assets/hs-logo.svg';
+import logo from '../../assets/hs-logo.png';
 import { BurgerMenuIcon, Xicon } from '../../assets/icons';
 import { useState } from 'react';
 
