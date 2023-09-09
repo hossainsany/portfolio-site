@@ -13,6 +13,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 0 30px;
+
         .tags {
             padding-top: 15px;
             display: flex;
@@ -53,6 +54,44 @@
         }
         .projectImg {
             order: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .singleProjectCard {
+        flex-direction: column;
+        .projectText {
+            order: 2;
+            padding: 0;
+            h3 {
+                padding: 10px 0;
+            }
+            .tags {
+                justify-content: center;
+                padding: 15px 0;
+            }
+            .buttons {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .projectImg {
+            order: 1;
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .singleProjectCard {
+        .projectImg {
+            order: 1;
+            height: 330px;
+            img {
+                object-position: top left;
+            }
         }
     }
 }

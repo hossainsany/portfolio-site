@@ -19,7 +19,7 @@
             margin-bottom: 10px;
             background-color: #43597d;
             color: $text-color;
-            min-width: 400px;
+            width: 400px;
             &:focus,
             &:active {
                 outline: 2px solid $accent-color;
@@ -40,6 +40,20 @@
         }
         .submitBtn {
             width: 400px;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+    .contact {
+        .form {
+            input,
+            textarea,
+            label,
+            .submitBtn {
+                width: 350px;
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ import { ReactComponent as LinkedinIcon } from './linkedin.svg';
 import { ReactComponent as UpworkIcon } from './upwork.svg';
 import { ReactComponent as UpIcon } from './angle-up.svg';
 import { ReactComponent as RightIcon } from './angle-right.svg';
+import { ReactComponent as Xicon } from './x.svg';
 
 export {
     CssIcon,
@@ -38,4 +39,5 @@ export {
     UpworkIcon,
     UpIcon,
     RightIcon,
+    Xicon,
 };

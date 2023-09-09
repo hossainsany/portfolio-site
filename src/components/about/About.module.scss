@@ -40,3 +40,39 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .about {
+        .container {
+            flex-direction: column;
+            .text {
+                order: 2;
+                padding: 0;
+            }
+            .aboutImg {
+                order: 1;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// tablet
+//tablet
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .about {
+        .container {
+            flex-direction: column;
+            .text {
+                order: 2;
+                padding: 0;
+            }
+            .aboutImg {
+                order: 1;
+                width: 50%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

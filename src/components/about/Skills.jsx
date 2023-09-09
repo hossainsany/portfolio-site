@@ -18,7 +18,7 @@ const Skills = () => {
     return (
         <div className={style.skills}>
             <h3>Skills:</h3>
-            <div className={style.styleCards}>
+            <div className={style.skillCards}>
                 <div className={style.iconCard}>
                     <NextjsIcon />
                     <p>NextJS</p>

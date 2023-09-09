@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 1;
     h1 {
         font-size: 66px;
@@ -19,6 +20,34 @@
         -webkit-text-stroke: 1.5px $header-color;
         .heroText {
             -webkit-text-stroke: 1.5px $accent-color;
+        }
+    }
+}
+
+// phone
+@media screen and (max-width: 768px) {
+    .hero {
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            -webkit-text-stroke: 1px $header-color;
+            .heroText {
+                display: inline-block;
+                -webkit-text-stroke: 1px $accent-color;
+            }
+            &:last-child {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .hero {
+        h1 {
+            font-size: 54px;
+            text-align: center;
         }
     }
 }

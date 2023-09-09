@@ -32,7 +32,7 @@ const Footer = ({ location }) => {
                     All rights reserved <span className='active'>© 2024 Hossain Sany.</span>
                 </p>
             </div>
-            <Link to='top' smooth={true} offset={0} duration={500} className={style.scrollTop}>
+            <Link to='top' smooth={true} offset={0} duration={800} className={style.scrollTop}>
                 <UpIcon />
             </Link>
         </footer>

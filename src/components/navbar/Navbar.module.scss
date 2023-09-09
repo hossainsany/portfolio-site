@@ -51,3 +51,104 @@
         background: $bg-dark;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 350px;
+        overflow: hidden;
+
+        .burgerMenu {
+            display: flex;
+            cursor: pointer;
+            svg {
+                width: 30px;
+                height: 30px;
+                fill: $text-color;
+            }
+        }
+        .navLinks {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 105vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $bg-dark;
+            backdrop-filter: blur(10px);
+
+            opacity: 0;
+            z-index: -1;
+            li {
+                margin: 0;
+            }
+        }
+        &.overflowHidden {
+            overflow: hidden;
+        }
+        &.overflowVisible {
+            overflow: visible;
+        }
+        .hidden {
+            opacity: 0 !important;
+        }
+        .show {
+            opacity: 1 !important;
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .navbar {
+        width: 750px;
+        overflow: hidden;
+
+        .burgerMenu {
+            display: flex;
+            cursor: pointer;
+            svg {
+                width: 30px;
+                height: 30px;
+                fill: $text-color;
+            }
+        }
+        .navLinks {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 105vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $bg-dark;
+            backdrop-filter: blur(10px);
+
+            opacity: 0;
+            z-index: -1;
+            li {
+                margin: 0;
+            }
+        }
+        &.overflowHidden {
+            overflow: hidden;
+        }
+        &.overflowVisible {
+            overflow: visible;
+        }
+        .hidden {
+            opacity: 0 !important;
+        }
+        .show {
+            opacity: 1 !important;
+        }
+    }
+}
