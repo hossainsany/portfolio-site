@@ -10,7 +10,9 @@ const Navbar = ({ location }) => {
     const isHome = location.pathname;
     const [isActive, setIsActive] = useState(false);
 
-    console.log(isActive);
+    const handleClick = () => {
+        isActive ? setIsActive(false) : setIsActive(true);
+    };
 
     return (
         <nav
@@ -36,41 +38,47 @@ const Navbar = ({ location }) => {
                 </Link>
             )}
 
-            <div className={style.burgerMenu} onClick={() => (isActive ? setIsActive(false) : setIsActive(true))}>
+            <div className={style.burgerMenu} onClick={handleClick}>
                 {!isActive ? <BurgerMenuIcon /> : <Xicon />}
             </div>
 
             <ul className={`${style.navLinks} ${isActive ? style.show : style.hidden}`}>
                 <li>
                     {isHome === '/' ? (
-                        <ScrollLink activeClass='active' spy={true} smooth={true} offset={0} duration={800} to='top'>
+                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='top'>
                             Home
                         </ScrollLink>
                     ) : (
-                        <Link to='/'>Home</Link>
+                        <Link to='/' onClick={handleClick}>
+                            Home
+                        </Link>
                     )}
                 </li>
                 <li>
                     {isHome === '/' ? (
-                        <ScrollLink activeClass='active' spy={true} smooth={true} offset={0} duration={800} to='about'>
+                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='about'>
                             About
                         </ScrollLink>
                     ) : (
-                        <Link to='/'>About</Link>
+                        <Link to='/' onClick={handleClick}>
+                            About
+                        </Link>
                     )}
                 </li>
                 <li>
-                    <ScrollLink activeClass='active' spy={true} smooth={true} offset={0} duration={800} to='projects'>
+                    <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='projects'>
                         Projects
                     </ScrollLink>
                 </li>
                 <li>
                     {isHome === '/' ? (
-                        <ScrollLink activeClass='active' spy={true} smooth={true} offset={0} duration={800} to='contact'>
+                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='contact'>
                             Contact
                         </ScrollLink>
                     ) : (
-                        <Link to='/'>Contact</Link>
+                        <Link to='/' onClick={handleClick}>
+                            Contact
+                        </Link>
                     )}
                 </li>
             </ul>

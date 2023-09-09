@@ -79,6 +79,9 @@
         }
         .projectImg {
             order: 1;
+            img {
+                object-position: top left;
+            }
         }
     }
 }
