@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 import { DoubleDownIcon } from '../../assets/icons';
 import style from './Hero.module.scss';
@@ -218,9 +218,11 @@ const Hero = () => {
                     </motion.svg>
                 </div>
 
-                <Link to='about' smooth={true} offset={0} duration={800} className={style.scroll}>
-                    <DoubleDownIcon />
-                </Link>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 0.5, ease: easeInOut }}>
+                    <Link to='about' smooth={true} offset={0} duration={800} className={style.scroll}>
+                        <DoubleDownIcon />
+                    </Link>
+                </motion.div>
             </div>
         </div>
     );
