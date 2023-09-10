@@ -1,88 +1,50 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
-import style from './Navbar.module.scss';
+import { Link } from 'react-router-dom';
 
+import style from './Navbar.module.scss';
+import ScrollLinks from './ScrollLinks';
+import PageLinks from './PageLinks';
 import logo from '../../assets/hs-logo.png';
 import { BurgerMenuIcon, Xicon } from '../../assets/icons';
-import { useState } from 'react';
 
 const Navbar = ({ location }) => {
-    const isHome = location.pathname;
-    const [isActive, setIsActive] = useState(false);
+    const route = location.pathname;
+    const [burgerOpen, setBurgerOpen] = useState(false);
 
-    const handleClick = () => {
-        isActive ? setIsActive(false) : setIsActive(true);
+    const clickHandle = () => {
+        burgerOpen ? setBurgerOpen(false) : setBurgerOpen(true);
+        console.log('handling click');
     };
 
     return (
-        <nav
-            className={`${style.navbar} ${isActive ? style.overflowVisible : style.overflowHidden} ${
-                location.pathname === '/projects' ? style.bgLight : style.bgDark
-            }`}
+        <motion.nav
+            initial={{ y: -85, x: '-50%' }}
+            animate={{ y: 0, x: '-50%' }}
+            transition={{ ease: 'easeOut', duration: 0.4, delay: 0.2 }}
+            className={`${style.navbar}  ${location.pathname === '/projects' ? style.bgLight : style.bgDark}`}
         >
-            {isHome === '/' ? (
-                <ScrollLink
-                    activeClass='active'
-                    className={`${style.logo} ${isActive ? style.hidden : style.show}`}
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={800}
-                    to='top'
-                >
-                    <img src={logo} alt='hossain sany website logo' />
+            {route === '/' ? (
+                <ScrollLink className={`${style.logo} ${burgerOpen ? style.hidden : ''}`} to='top' smooth={true} offset={0} duration={800}>
+                    <img src={logo} alt='website logo' />
                 </ScrollLink>
             ) : (
-                <Link to='/' className={`${style.logo} ${isActive ? style.hidden : style.show}`}>
-                    <img src={logo} alt='hossain sany website logo' />
+                <Link className={`${style.logo} ${burgerOpen ? style.hidden : ''}`} to='/'>
+                    <img src={logo} alt='website logo' />
                 </Link>
             )}
 
-            <div className={style.burgerMenu} onClick={handleClick}>
-                {!isActive ? <BurgerMenuIcon /> : <Xicon />}
+            <div className={style.burgerMenu} onClick={clickHandle}>
+                {burgerOpen ? <Xicon /> : <BurgerMenuIcon />}
             </div>
 
-            <ul className={`${style.navLinks} ${isActive ? style.show : style.hidden}`}>
-                <li>
-                    {isHome === '/' ? (
-                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='top'>
-                            Home
-                        </ScrollLink>
-                    ) : (
-                        <Link to='/' onClick={handleClick}>
-                            Home
-                        </Link>
-                    )}
-                </li>
-                <li>
-                    {isHome === '/' ? (
-                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='about'>
-                            About
-                        </ScrollLink>
-                    ) : (
-                        <Link to='/' onClick={handleClick}>
-                            About
-                        </Link>
-                    )}
-                </li>
-                <li>
-                    <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='projects'>
-                        Projects
-                    </ScrollLink>
-                </li>
-                <li>
-                    {isHome === '/' ? (
-                        <ScrollLink activeClass='active' onClick={handleClick} spy={true} smooth={true} offset={0} duration={800} to='contact'>
-                            Contact
-                        </ScrollLink>
-                    ) : (
-                        <Link to='/' onClick={handleClick}>
-                            Contact
-                        </Link>
-                    )}
-                </li>
-            </ul>
-        </nav>
+            {route === '/' ? (
+                <ScrollLinks navLinks={`${style.navLinks} ${burgerOpen ? style.visible : ''}`} clickHandle={clickHandle} />
+            ) : (
+                <PageLinks navLinks={`${style.navLinks} ${burgerOpen ? style.visible : ''}`} clickHandle={clickHandle} />
+            )}
+        </motion.nav>
     );
 };
 

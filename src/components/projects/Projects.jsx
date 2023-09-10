@@ -17,6 +17,7 @@ const Projects = () => {
                         View All projects
                         <RightIcon />
                     </Link>
+
                     {limitedProjects.map((project) => {
                         return (
                             <SingleProjectCard

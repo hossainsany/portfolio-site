@@ -12,17 +12,17 @@ const Footer = ({ location }) => {
                     </a>
                 </div>
                 <div className={style.iconCard}>
-                    <a href='https://www.linkedin.com/in/hossainsany/' target='_black'>
+                    <a href='https://www.linkedin.com/in/hossainsany/' target='_blank' rel='noopener noreferrer'>
                         <LinkedinIcon />
                     </a>
                 </div>
                 <div className={style.iconCard}>
-                    <a href='https://github.com/hossainsany/' target='_black'>
+                    <a href='https://github.com/hossainsany/' target='_blank' rel='noopener noreferrer'>
                         <GithubIcon />
                     </a>
                 </div>
                 <div className={style.iconCard}>
-                    <a href='https://www.upwork.com/freelancers/~015fdcf2a10aec9174' target='_black'>
+                    <a href='https://www.upwork.com/freelancers/~015fdcf2a10aec9174' target='_blank' rel='noopener noreferrer'>
                         <UpworkIcon />
                     </a>
                 </div>

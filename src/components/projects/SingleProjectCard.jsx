@@ -17,16 +17,16 @@ const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => 
                 </div>
 
                 <div className='buttons'>
-                    <a href={liveLink} className='btn'>
+                    <a href={liveLink} className='btn' target='_blank' rel='noopener noreferrer'>
                         View Demo
                     </a>
-                    <a href={githubLink} className='btn'>
+                    <a href={githubLink} className='btn' target='_blank' rel='noopener noreferrer'>
                         Souce Code
                     </a>
                 </div>
             </div>
             <div className='projectImg'>
-                <img src={img} alt='project screenshot' />
+                <img src={img} alt='project screenshot' loading='lazy' />
             </div>
         </div>
     );
