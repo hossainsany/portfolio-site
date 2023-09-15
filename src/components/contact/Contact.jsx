@@ -14,7 +14,7 @@ const Contact = () => {
         },
         // form validation
         validationSchema: Yup.object({
-            name: Yup.string().max(20, 'Name must me less than 20 characters long.').required('Name is required.'),
+            name: Yup.string().max(20, 'Name must be less than 20 characters long.').required('Name is required.'),
             email: Yup.string().email('Invalid email address.').required('Email is required.'),
             message: Yup.string().min(20, 'Message must be more than 20 characters long.').required('Message is required.'),
         }),
