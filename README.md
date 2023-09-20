@@ -1,6 +1,6 @@
 # Portfolio Website README
 
-This is a portfolio website created with React, HTML, and CSS. As a frontend developer, this website showcases my skills and projects to potential employers and clients.
+This is a portfolio website created with React, Framer Motion, and Sass. As a frontend developer, this website showcases my skills and projects to potential employers and clients.
 ### Features
 
 + A landing page with an introduction and links to my projects and resume
