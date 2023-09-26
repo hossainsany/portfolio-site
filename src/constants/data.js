@@ -24,8 +24,8 @@ const projects = [
         description:
             'This digital marketing landing page website was created using HTML, CSS, JavaScript, and Bootstrap. It showcases my skills in front-end web development and design.',
         tags: ['html', 'css', 'javascript', 'bootstrap'],
-        liveLink: 'https://demo-apple.hossainsany.com/',
-        githubLink: 'https://github.com/hossainsany/notAppleSite',
+        liveLink: 'https://agency-demo.hossainsany.com/',
+        githubLink: 'https://github.com/hossainsany/bootstrap-os-site',
         id: 3,
         img: './project-img/marketing.jpg',
     },
@@ -34,8 +34,8 @@ const projects = [
         description:
             "This restaurant website was created using HTML, CSS, Bootstrap, and JavaScript. The site provides visitors with information about the restaurant's menu, services, and location.",
         tags: ['html', 'css', 'bootstrap', 'javascript'],
-        liveLink: 'https://demo-apple.hossainsany.com/',
-        githubLink: 'https://github.com/hossainsany/notAppleSite',
+        liveLink: 'https://sampan-restaurant.hossainsany.com',
+        githubLink: 'https://github.com/hossainsany/modern-restaurant',
         id: 4,
         img: './project-img/restaurant.jpg',
     },

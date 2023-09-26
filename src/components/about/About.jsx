@@ -17,7 +17,12 @@ const About = () => {
                         </p>
                         <p>
                             My work is defined by a strong track record of 5-star ratings and a 100% Job Success Score on
-                            <a href='https://www.upwork.com/freelancers/~015fdcf2a10aec9174' className={style.link}>
+                            <a
+                                href='https://www.upwork.com/freelancers/~015fdcf2a10aec9174'
+                                className={style.link}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
                                 Upwork
                             </a>
                             , reflecting my unwavering commitment to delivering top-notch results. I specialize in front-end development, utilizing
