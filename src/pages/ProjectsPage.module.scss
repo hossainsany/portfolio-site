@@ -4,6 +4,7 @@
     background-color: $bg-dark;
     padding-top: 150px;
     min-height: 100vh;
+
     .progressBar {
         position: fixed;
         top: 0;
@@ -14,6 +15,33 @@
         background: $accent-color;
         transform-origin: 0%;
     }
+    .filter {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        .btn {
+            padding: 5px 15px;
+            margin-right: 5px;
+            border: 2px solid $accent-color;
+            opacity: 0.7;
+            &:last-child {
+                margin: 0;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            &.active {
+                background-color: $accent-color;
+                color: #333 !important;
+                opacity: 1;
+            }
+        }
+    }
+    .projectsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 //phone
@@ -21,6 +49,11 @@
     .projectsPage {
         .progressBar {
             width: 0.2px;
+        }
+        .filter {
+            .btn {
+                padding: 5px 10px;
+            }
         }
     }
 }

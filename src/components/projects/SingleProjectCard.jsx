@@ -1,17 +1,22 @@
 import './SingleProjectCard.scss';
 
 const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => {
-    const shortDesc = desc.slice(0, 298) + '...';
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
 
     return (
         <div className='singleProjectCard'>
+            <div className='projectImg'>
+                <img src={img} alt='project screenshot' loading='lazy' />
+            </div>
             <div className='projectText'>
                 <h3 className='title'>{title}</h3>
                 <div>
-                    <p className='desc'>{shortDesc}</p>
+                    <p className='desc'>{desc}</p>
                     <ul className='tags'>
                         {tags.map((tag) => (
-                            <li key={tag}>{tag}</li>
+                            <li key={tag}>{capitalizeFirstLetter(tag)}</li>
                         ))}
                     </ul>
                 </div>
@@ -24,9 +29,6 @@ const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => 
                         Souce Code
                     </a>
                 </div>
-            </div>
-            <div className='projectImg'>
-                <img src={img} alt='project screenshot' loading='lazy' />
             </div>
         </div>
     );

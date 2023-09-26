@@ -4,11 +4,13 @@
     background: $bg-dark;
     .projectsContainer {
         position: relative;
+        display: flex;
+        justify-content: space-between;
         .viewAll {
             display: flex;
             align-items: center;
             position: absolute;
-            top: -20px;
+            top: -40px;
             right: 0;
             color: $accent-color;
             cursor: pointer;
@@ -35,6 +37,24 @@
         .seeMore {
             width: 300px;
             text-align: center;
+        }
+    }
+}
+
+//phone
+@media screen and (max-width: 767px) {
+    .projects {
+        .projectsContainer {
+            flex-direction: column;
+        }
+    }
+}
+
+//tablet
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .projects {
+        .projectsContainer {
+            flex-wrap: wrap;
         }
     }
 }
