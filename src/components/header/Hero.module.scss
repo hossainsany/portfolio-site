@@ -13,6 +13,9 @@
     align-items: center;
     text-align: center;
     z-index: 1;
+    .h1 {
+        display: none;
+    }
     svg.text {
         fill: transparent;
         stroke: $text-color;
@@ -57,7 +60,14 @@
 // phone
 @media screen and (max-width: 768px) {
     .hero {
+        .h1 {
+            display: block;
+            color: $text-color;
+            font-size: 20px;
+            text-align: start;
+        }
         svg.text {
+            display: none;
             width: 100%;
         }
     }

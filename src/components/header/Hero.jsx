@@ -7,13 +7,40 @@ import style from './Hero.module.scss';
 const Hero = () => {
     const textVariants = {
         hidden: { opacity: 0, pathLength: 0 },
-        visible: { opacity: 1, pathLength: 1, transition: { duration: 2, ease: 'easeInOut' } },
+        visible: {
+            opacity: 1,
+            pathLength: 1,
+            transition: { duration: 2, ease: 'easeInOut' },
+        },
     };
 
     return (
         <div className={style.hero}>
             <div className='container'>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <div className={style.h1}>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4 }}
+                            id='page-title'
+                        >
+                            <span style={{ display: 'block' }}>Hey,</span>
+                            <span style={{ display: 'block' }}>
+                                Im <span className='active'>Hossain Sany,</span>
+                            </span>
+                            <span style={{ display: 'block' }}>A Freelance Web</span>
+                            <span>Developer.</span>
+                        </motion.h1>
+                    </div>
+
                     <motion.svg
                         variants={textVariants}
                         initial='hidden'
@@ -23,6 +50,9 @@ const Hero = () => {
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 819.8 140.8'
                         className={style.text}
+                        role='heading'
+                        aria-label='Hey, Im Hossain Sany, a freelance web developer.'
+                        aria-labelledby='page-title'
                     >
                         <motion.polygon
                             variants={textVariants}
@@ -209,7 +239,10 @@ const Hero = () => {
                             className='cls-1'
                             d='m794.8,96.4l-.2-3.9h-7.5v34.9h7.8v-23.8c1.2-2.8,3.7-4.1,7.2-4.1s2.2,0,3.2.3v-7.3c-.7-.3-1.6-.5-2.7-.5-3.4,0-6,1.5-7.9,4.5Z'
                         />
-                        <polygon className='cls-1' points='818.7 113.6 819.4 80.5 811.2 80.5 811.9 113.6 818.7 113.6' />
+                        <polygon
+                            className='cls-1'
+                            points='818.7 113.6 819.4 80.5 811.2 80.5 811.9 113.6 818.7 113.6'
+                        />
                         <motion.path
                             variants={textVariants}
                             className='cls-1'
@@ -218,8 +251,18 @@ const Hero = () => {
                     </motion.svg>
                 </div>
 
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 0.5, ease: easeInOut }}>
-                    <Link to='about' smooth={true} offset={0} duration={800} className={style.scroll}>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.2, duration: 0.5, ease: easeInOut }}
+                >
+                    <Link
+                        to='about'
+                        smooth={true}
+                        offset={0}
+                        duration={800}
+                        className={style.scroll}
+                    >
                         <DoubleDownIcon />
                     </Link>
                 </motion.div>
