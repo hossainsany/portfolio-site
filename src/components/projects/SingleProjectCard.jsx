@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './SingleProjectCard.scss';
 
 const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => {
@@ -6,7 +7,7 @@ const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => 
     };
 
     return (
-        <div className='singleProjectCard'>
+        <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='singleProjectCard'>
             <div className='projectImg'>
                 <img src={img} alt='project screenshot' loading='lazy' />
             </div>
@@ -30,7 +31,7 @@ const SingleProjectCard = ({ title, desc, liveLink, githubLink, tags, img }) => 
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

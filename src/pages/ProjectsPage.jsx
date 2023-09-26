@@ -1,11 +1,10 @@
-import { motion, useScroll } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { SingleProjectCard } from '../components';
 import style from './ProjectsPage.module.scss';
 import projects from '../constants/data';
 import { useState } from 'react';
 
 const ProjectsPage = () => {
-    const { scrollY } = useScroll();
     const [filterSelected, setFilterSelected] = useState('all');
 
     const handleFilter = (e) => {
@@ -15,12 +14,6 @@ const ProjectsPage = () => {
 
     return (
         <section className={style.projectsPage} id='top'>
-            <motion.div
-                style={{
-                    scaleX: scrollY,
-                }}
-                className={style.progressBar}
-            ></motion.div>
             <h2 className='section-title'>Projects</h2>
             <div className='container'>
                 <div className={style.filter}>
@@ -42,23 +35,25 @@ const ProjectsPage = () => {
                     </button>
                 </div>
 
-                <div className={style.projectsContainer}>
-                    {projects.map((project) => {
-                        if (filterSelected === 'all' || project.tags.includes(filterSelected)) {
-                            return (
-                                <SingleProjectCard
-                                    title={project.title}
-                                    desc={project.description}
-                                    liveLink={project.liveLink}
-                                    githubLink={project.githubLink}
-                                    key={project.id}
-                                    tags={project.tags}
-                                    img={project.img}
-                                />
-                            );
-                        }
-                    })}
-                </div>
+                <motion.div layout className={style.projectsContainer}>
+                    <AnimatePresence>
+                        {projects.map((project) => {
+                            if (filterSelected === 'all' || project.tags.includes(filterSelected)) {
+                                return (
+                                    <SingleProjectCard
+                                        title={project.title}
+                                        desc={project.description}
+                                        liveLink={project.liveLink}
+                                        githubLink={project.githubLink}
+                                        key={project.id}
+                                        tags={project.tags}
+                                        img={project.img}
+                                    />
+                                );
+                            }
+                        })}
+                    </AnimatePresence>
+                </motion.div>
             </div>
         </section>
     );

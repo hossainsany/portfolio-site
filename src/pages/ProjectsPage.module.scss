@@ -5,16 +5,6 @@
     padding-top: 150px;
     min-height: 100vh;
 
-    .progressBar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 1.01px;
-        height: 10px;
-        background: $accent-color;
-        transform-origin: 0%;
-    }
     .filter {
         display: flex;
         justify-content: center;
@@ -47,9 +37,6 @@
 //phone
 @media screen and (max-width: 767px) {
     .projectsPage {
-        .progressBar {
-            width: 0.2px;
-        }
         .filter {
             .btn {
                 padding: 5px 10px;
@@ -60,9 +47,4 @@
 
 // tablet
 @media screen and (min-width: 769px) and (max-width: 1400px) {
-    .projectsPage {
-        .progressBar {
-            width: 0.7px;
-        }
-    }
 }
