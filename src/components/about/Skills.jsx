@@ -7,10 +7,10 @@ import {
     JsIcon,
     NextjsIcon,
     NodejsIcon,
+    ExpressIcon,
     NpmIcon,
     ReactIcon,
     TailwindIcon,
-    MuiIcon,
     WordpressIcon,
 } from '../../assets/icons/index';
 
@@ -37,20 +37,12 @@ const Skills = () => {
                     <p>Tailwind</p>
                 </div>
                 <div className={style.iconCard}>
-                    <MuiIcon />
-                    <p>MaterialUI</p>
-                </div>
-                <div className={style.iconCard}>
-                    <CssIcon />
-                    <p>CSS</p>
-                </div>
-                <div className={style.iconCard}>
-                    <HtmlIcon />
-                    <p>HTML</p>
-                </div>
-                <div className={style.iconCard}>
                     <NodejsIcon />
                     <p>NodeJS</p>
+                </div>
+                <div className={style.iconCard}>
+                    <ExpressIcon />
+                    <p>ExpressJS</p>
                 </div>
                 <div className={style.iconCard}>
                     <NpmIcon />
@@ -58,16 +50,24 @@ const Skills = () => {
                 </div>
 
                 <div className={style.iconCard}>
+                    <HtmlIcon />
+                    <p>HTML</p>
+                </div>
+                <div className={style.iconCard}>
+                    <CssIcon />
+                    <p>CSS</p>
+                </div>
+                <div className={style.iconCard}>
                     <GitIcon />
                     <p>Git</p>
                 </div>
                 <div className={style.iconCard}>
-                    <WordpressIcon />
-                    <p>WordPress</p>
-                </div>
-                <div className={style.iconCard}>
                     <FigmaIcon />
                     <p>Figma</p>
+                </div>
+                <div className={style.iconCard}>
+                    <WordpressIcon />
+                    <p>WordPress</p>
                 </div>
             </div>
         </div>

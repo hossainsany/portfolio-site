@@ -1,4 +1,5 @@
 import { ReactComponent as CssIcon } from './css.svg';
+import { ReactComponent as SassIcon } from './sass.svg';
 import { ReactComponent as FigmaIcon } from './figma.svg';
 import { ReactComponent as GitIcon } from './git.svg';
 import { ReactComponent as HtmlIcon } from './html.svg';
@@ -17,11 +18,19 @@ import { ReactComponent as LinkedinIcon } from './linkedin.svg';
 import { ReactComponent as UpworkIcon } from './upwork.svg';
 import { ReactComponent as UpIcon } from './angle-up.svg';
 import { ReactComponent as RightIcon } from './angle-right.svg';
+import { ReactComponent as BootstrapIcon } from './bootstrap.svg';
+import { ReactComponent as ExpressIcon } from './express.svg';
+import { ReactComponent as MongoIcon } from './mongodb.svg';
+import { ReactComponent as ViteIcon } from './vite.svg';
 import { ReactComponent as Xicon } from './x.svg';
+import { ReactComponent as ElementorIcon } from './elementor.svg';
+import { ReactComponent as RapidIcon } from './rapidapi.svg';
+import { ReactComponent as YoutubeIcon } from './youtube.svg';
 import { ReactComponent as DoubleDownIcon } from './double-down.svg';
 
 export {
     CssIcon,
+    SassIcon,
     FigmaIcon,
     GitIcon,
     HtmlIcon,
@@ -40,6 +49,13 @@ export {
     UpworkIcon,
     UpIcon,
     RightIcon,
+    BootstrapIcon,
+    ExpressIcon,
+    MongoIcon,
+    ViteIcon,
     Xicon,
     DoubleDownIcon,
+    ElementorIcon,
+    RapidIcon,
+    YoutubeIcon,
 };

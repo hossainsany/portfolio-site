@@ -8,7 +8,8 @@ const ProjectsPage = () => {
     const [filterSelected, setFilterSelected] = useState('all');
 
     const handleFilter = (e) => {
-        let filterTag = e.target.id;
+        let filterTag = e.target.id.toLowerCase();
+        console.log(filterTag);
         setFilterSelected(filterTag);
     };
 
@@ -17,17 +18,37 @@ const ProjectsPage = () => {
             <h2 className='section-title'>Projects</h2>
             <div className='container'>
                 <div className={style.filter}>
-                    <button className={`${style.btn} btn ${filterSelected === 'all' ? style.active : ''}`} id='all' onClick={handleFilter}>
+                    <button
+                        className={`${style.btn} btn ${
+                            filterSelected === 'all' ? style.active : ''
+                        }`}
+                        id='all'
+                        onClick={handleFilter}
+                    >
                         All
                     </button>
-                    <button className={`${style.btn} btn ${filterSelected === 'react' ? style.active : ''}`} id='react' onClick={handleFilter}>
+                    <button
+                        className={`${style.btn} btn ${
+                            filterSelected === 'react' ? style.active : ''
+                        }`}
+                        id='react'
+                        onClick={handleFilter}
+                    >
                         React
                     </button>
-                    <button className={`${style.btn} btn ${filterSelected === 'html' ? style.active : ''}`} id='html' onClick={handleFilter}>
+                    <button
+                        className={`${style.btn} btn ${
+                            filterSelected === 'html' ? style.active : ''
+                        }`}
+                        id='html'
+                        onClick={handleFilter}
+                    >
                         HTML/CSS
                     </button>
                     <button
-                        className={`${style.btn} btn ${filterSelected === 'wordpress' ? style.active : ''}`}
+                        className={`${style.btn} btn ${
+                            filterSelected === 'wordpress' ? style.active : ''
+                        }`}
                         id='wordpress'
                         onClick={handleFilter}
                     >
@@ -37,21 +58,28 @@ const ProjectsPage = () => {
 
                 <motion.div layout className={style.projectsContainer}>
                     <AnimatePresence>
-                        {projects.map((project) => {
-                            if (filterSelected === 'all' || project.tags.includes(filterSelected)) {
-                                return (
-                                    <SingleProjectCard
-                                        title={project.title}
-                                        desc={project.description}
-                                        liveLink={project.liveLink}
-                                        githubLink={project.githubLink}
-                                        key={project.id}
-                                        tags={project.tags}
-                                        img={project.img}
-                                    />
-                                );
+                        {projects.map(
+                            ({ title, description, liveLink, githubLink, id, tags, img }) => {
+                                const projectTags = tags.map((tag) => tag.toLowerCase());
+                                console.log(projectTags);
+                                if (
+                                    filterSelected === 'all' ||
+                                    projectTags.includes(filterSelected)
+                                ) {
+                                    return (
+                                        <SingleProjectCard
+                                            title={title}
+                                            desc={description}
+                                            liveLink={liveLink}
+                                            githubLink={githubLink}
+                                            key={id}
+                                            tags={tags}
+                                            img={img}
+                                        />
+                                    );
+                                }
                             }
-                        })}
+                        )}
                     </AnimatePresence>
                 </motion.div>
             </div>
