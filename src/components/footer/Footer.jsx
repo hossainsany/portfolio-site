@@ -60,7 +60,7 @@ const Footer = ({ location }) => {
                     .
                 </p>
                 <p>
-                    All rights reserved <span className='active'>© 2023 Hossain Sany.</span>
+                    All rights reserved <span className='active'>© 2024 Hossain Sany.</span>
                 </p>
             </div>
             <Link to='top' smooth={true} offset={0} duration={800} className={style.scrollTop}>

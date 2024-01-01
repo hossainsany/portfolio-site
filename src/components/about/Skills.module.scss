@@ -32,7 +32,7 @@
                 opacity: 0;
                 font-size: 13px;
                 font-weight: 500;
-                background: #ffffff98;
+                background: #afb5c0;
                 color: #000;
                 padding: 1px 3px;
                 border-radius: 3px;
@@ -40,16 +40,18 @@
                 bottom: -28px;
                 left: 50%;
                 transform: translate(-50%);
+                z-index: 5;
                 transition: 200ms ease-in-out;
             }
             &:hover {
                 border: 2px solid $accent-color;
                 transition: 400ms ease-in-out;
+                z-index: 10;
             }
             &:hover p {
-                opacity: 0.7;
+                opacity: 1;
                 transition: 200ms ease-in-out;
-                transition-delay: 400ms;
+                transition-delay: 500ms;
             }
 
             // nextjs icon bg
